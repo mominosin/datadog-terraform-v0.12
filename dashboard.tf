@@ -1,5 +1,5 @@
-resource "datadog_timeboard" "sample_11" {
-  title       = "Terraform v0.11"
+resource "datadog_timeboard" "sample_12" {
+  title       = "Terraform v0.12"
   description = "created using the Datadog provider in Terraform"
   read_only   = true
 
