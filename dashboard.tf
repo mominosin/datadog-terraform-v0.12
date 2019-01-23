@@ -11,7 +11,7 @@ resource "datadog_timeboard" "sample_11" {
     request {
       q    = "avg:aws.applicationelb.target_response_time.average{*}"
       type = "line"
-      style {
+      style = {
         palette = "orange"
         type    = "solid"
         width   = "normal"
@@ -21,7 +21,7 @@ resource "datadog_timeboard" "sample_11" {
     request {
       q    = "week_before(avg:aws.applicationelb.target_response_time.average{*})"
       type = "line"
-      style {
+      style = {
         palette = "orange"
         type    = "dotted"
         width   = "normal"
@@ -31,7 +31,7 @@ resource "datadog_timeboard" "sample_11" {
     request {
       q    = "avg:aws.applicationelb.target_response_time.average{*}"
       type = "line"
-      style {
+      style = {
         palette = "cool"
         type    = "solid"
         width   = "normal"
@@ -41,7 +41,7 @@ resource "datadog_timeboard" "sample_11" {
     request {
       q    = "week_before(avg:aws.applicationelb.target_response_time.average{*})"
       type = "line"
-      style {
+      style = {
         palette = "cool"
         type    = "dotted"
         width   = "normal"
