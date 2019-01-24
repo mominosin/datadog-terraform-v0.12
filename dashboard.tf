@@ -4,7 +4,7 @@ resource "datadog_timeboard" "sample_12" {
   read_only   = true
 
   graph {
-    title = "ALB Response Time"
+    title = "ALB Response Time 01"
     viz   = "timeseries"
     precision = 0
 
@@ -17,7 +17,12 @@ resource "datadog_timeboard" "sample_12" {
         width   = "normal"
       }
     }
+  }
 
+  graph {
+    title = "ALB Response Time 02"
+    viz   = "timeseries"
+    precision = 0
     request {
       q    = "week_before(avg:aws.applicationelb.target_response_time.average{*})"
       type = "line"
@@ -27,22 +32,33 @@ resource "datadog_timeboard" "sample_12" {
         width   = "normal"
       }
     }
+  }
+
+  graph {
+    title = "ALB Response Time 03"
+    viz   = "timeseries"
+    precision = 0
 
     request {
       q    = "avg:aws.applicationelb.target_response_time.average{*}"
       type = "line"
       style = {
-        palette = "cool"
+        palette = "orange"
         type    = "solid"
         width   = "normal"
       }
     }
+  }
 
+  graph {
+    title = "ALB Response Time 04"
+    viz   = "timeseries"
+    precision = 0
     request {
       q    = "week_before(avg:aws.applicationelb.target_response_time.average{*})"
       type = "line"
       style = {
-        palette = "cool"
+        palette = "orange"
         type    = "dotted"
         width   = "normal"
       }
